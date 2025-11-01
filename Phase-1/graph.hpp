@@ -26,13 +26,14 @@ public:
 
 class Graph{
     std::unordered_map<int,Node> node_list;
-    std::unordered_map<int,std::unordered_map<int,Edge>> adjacency_list;
+    std::unordered_map<int,std::unordered_map<int,std::unordered_map<int,Edge>>> adjacency_list;
     std::unordered_map<int,Edge> edge_list;
 
+public:
     void addNode(const Node& node);
     void addEdge(const Edge& edge);
     Node removeNode(int id);
     Edge removeEdge(int id);
-    Edge modifyEdge();
+    Edge modifyEdge(int id, double length);
 };
 #endif
