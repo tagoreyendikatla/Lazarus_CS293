@@ -1,9 +1,9 @@
 #ifndef GRPAH_HPP
 #define GRAPH_HPP
-#include<iostream>
-#include<vector>
-#include<string>
-#include<unordered_map>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <unordered_map>
 
 class Node{
 public:
@@ -22,14 +22,15 @@ public:
     std::string road_type;
 };
 
-class graph{
-public:
-    std::vector<Node> nodes;
-    std::unordered_map<int, std::unordered_map<int, Edge>> adjaceny_list;
+class Graph{
+    std::unordered_map<int,Node> node_list;
+    std::unordered_map<int,std::unordered_map<int,Edge>> adjacency_list;
+    std::unordered_map<int,Edge> edge_list;
 
     void addNode(const Node& node);
     void addEdge(const Edge& edge);
-
-    
+    Node removeNode(int id);
+    Edge removeEdge(int id);
+    Edge modifyEdge();
 };
 #endif
