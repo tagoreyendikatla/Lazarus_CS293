@@ -6,12 +6,14 @@
 #include<unordered_map>
 
 class Node{
+public:
     int id;
     double lat, lon;
     std::vector<std::string> pois;
 };
 
 class Edge{
+public:
     int id;
     int u, v;
     double length, average_time;
@@ -21,6 +23,7 @@ class Edge{
 };
 
 class graph{
+public:
     std::vector<Node> nodes;
     std::unordered_map<int, std::unordered_map<int, Edge>> adjaceny_list;
 

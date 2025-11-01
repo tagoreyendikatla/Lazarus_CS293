@@ -5,7 +5,8 @@
 #include <vector>
 #include <string>
 
-struct Result_KNN {
+class Result_KNN {
+public:
     int id;
     std::vector<int> node_ids; 
 };
