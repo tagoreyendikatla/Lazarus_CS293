@@ -13,13 +13,13 @@ public:
 
 class KNN {
 public:
-    Result_KNN findKNN(const graph& graph, int id, double lat, double lon, const std::string& type, int k, const std::string& metric);
+    Result_KNN findKNN(const Graph& graph, int id, double lat, double lon, const std::string& type, int k, const std::string& metric);
 
    
-    std::vector<int> findKNN_Euclidean(const graph& graph, double lat, double lon, const std::vector<int>& target_nodes, int k);
+    std::vector<int> findKNN_Euclidean(const Graph& graph, double lat, double lon, const std::vector<int>& target_nodes, int k);
     
       
-    std::vector<int> findKNN_ShortestPath(const graph& graph, double lat, double lon, const std::vector<int>& candidate_nodes, int k);
+    std::vector<int> findKNN_ShortestPath(const Graph& graph, double lat, double lon, const std::vector<int>& candidate_nodes, int k);
 };
 
 #endif
