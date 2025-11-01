@@ -6,6 +6,7 @@
 #include <string>
 
 class Result {
+public:
     int id;
     bool possible;
     double min_distance;    
