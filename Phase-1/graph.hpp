@@ -3,6 +3,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<unordered_map>
 
 class Node{
     int id;
@@ -21,9 +22,11 @@ class Edge{
 
 class graph{
     std::vector<Node> nodes;
-    std::vector<std::vector<Edge>> adjaceny_list;
+    std::unordered_map<int, std::unordered_map<int, Edge>> adjaceny_list;
 
     void addNode(const Node& node);
     void addEdge(const Edge& edge);
+
+    
 };
 #endif
