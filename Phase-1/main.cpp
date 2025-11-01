@@ -5,6 +5,7 @@
 /*
     Add other includes that you require, only write code wherever indicated
 */
+#include <graph.hpp>
 
 using json = nlohmann::json;
 
@@ -19,7 +20,13 @@ int main(int argc, char* argv[]) {
         Add your graph reading and processing code here
         Initialize any classes and data structures needed for query processing
     */
-
+    graph Graph_internal;
+    std::ifstream input_graph_file(argv[1]);
+    if (!input_graph_file.is_open()) {
+        std::cerr << "Failed to open " << argv[1] << std::endl;
+        return 1;
+    }  
+     
     // Read queries from second file
     std::ifstream queries_file(argv[2]);
     if (!queries_file.is_open()) {
