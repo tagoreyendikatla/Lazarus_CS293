@@ -10,6 +10,7 @@ public:
     int id;
     double lat, lon;
     std::vector<std::string> pois;
+    Node(int id, double lat, double lon, std::vector<std::string> pois) : id(id), lat(lat), lon(lon), pois(pois) {};
 };
 
 class Edge{
@@ -20,6 +21,7 @@ public:
     std::vector<double> speed_profile;
     bool oneway;
     std::string road_type;
+    Edge(int id, int u, int v, double length, double average_time, std::vector<double> speed_profile, bool oneway, std::string road_type) : id(id), u(u), v(v), length(length), average_time(average_time), speed_profile(speed_profile), oneway(oneway), road_type(road_type) {};
 };
 
 class Graph{
